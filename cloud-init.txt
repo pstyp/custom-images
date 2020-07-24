@@ -1,0 +1,11 @@
+#cloud-config
+
+package_update: true
+packages:
+- python3
+- python3-pip
+- git
+runcmd:
+- git clone https://github.com/pstyp/custom-images.git
+- pip3 install flask
+- python3 custom-images/app.py
